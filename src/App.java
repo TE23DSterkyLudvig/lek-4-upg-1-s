@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -18,6 +19,7 @@ public class App {
 
     System.out.println("personnummer");
     personnummer = tryInt(personnummer, tb);
+    String personnummerString = String.valueOf(personnummer);
 
     tb.nextLine();
 
@@ -26,6 +28,7 @@ public class App {
 
     System.out.println("mobilnummer");
     mobilnummer = tryInt(mobilnummer, tb);
+    String mobilnummerString = String.valueOf(mobilnummer);
 
     tb.nextLine();
 
@@ -36,10 +39,21 @@ public class App {
     program = tryString(program, tb);
 
 
-    elever elev = new elever(namn, personnummer,email,mobilnummer,klass,program);
+    elever elev = new elever(namn, personnummerString,email,mobilnummerString,klass,program);
     System.out.println("Elev " + elev.namn + " adderad");
     
+    String [] elevDelar = new String[] {elev.namn,elev.personnummer, elev.email, elev.mobilnummer, elev.klass, elev.program  };
     
+    
+    Thread.sleep(3000);
+
+    System.out.println(elev.namn);
+
+    for (int index = 0; index < elevDelar.length; index++) {
+        
+        System.out.println(elevDelar[index]);
+
+    }
         
 
    

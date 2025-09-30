@@ -1,12 +1,12 @@
 public class elever {
     String namn;
-    int personnummer;
+    String personnummer;
     String email;
-    int mobilnummer;
+    String mobilnummer;
     String klass;
     String program;
 
-    public elever(String namn, int personnummer, String email, int mobilnummer, String klass, String program)
+    public elever(String namn, String personnummer, String email, String mobilnummer, String klass, String program)
     {
         this.namn = namn;
         this.personnummer = personnummer;
