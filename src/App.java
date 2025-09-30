@@ -47,7 +47,15 @@ public class App {
     
     Thread.sleep(3000);
 
-    System.out.println(elev.namn);
+    System.out.println("""
+            
+
+
+
+
+            """);
+
+    System.out.println("information om eleven.");
 
     for (int index = 0; index < elevDelar.length; index++) {
         
