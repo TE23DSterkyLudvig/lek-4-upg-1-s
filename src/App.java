@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -11,11 +10,14 @@ public class App {
     String klass = "";
     String program ="";
 
+    Elev[] elever = new Elev[99];
+
+    for (int index = 0; index < 99; index++) {
+        
     
-
-
     System.out.println("namn");
     namn = tryString(namn,tb);
+    
 
     System.out.println("personnummer");
     personnummer = tryInt(personnummer, tb);
@@ -39,15 +41,40 @@ public class App {
     program = tryString(program, tb);
 
 
-    elever elev = new elever(namn, personnummerString,email,mobilnummerString,klass,program);
+    Elev elev = new Elev(namn, personnummerString,email,mobilnummerString,klass,program);
+
+    elever[index] = elev;
+
     System.out.println("Elev " + elev.namn + " adderad");
     
     String [] elevDelar = new String[] {elev.namn,elev.personnummer, elev.email, elev.mobilnummer, elev.klass, elev.program  };
+
+
+    try 
+    {
+        System.out.print("Vill du forsätta?");
+        String svar = tb.nextLine(); 
+
+        if(svar.equalsIgnoreCase(Yes))
+        break;
+
+    } 
+    catch (Exception e) 
+    {
+        System.out.println("Inte siffror");
+        continue;
+    }
+    
+    }
+
+
+
+
     
     
     Thread.sleep(3000);
 
-    System.out.println("""
+    /*System.out.println("""
             
 
 
@@ -55,16 +82,17 @@ public class App {
 
             """);
 
-    System.out.println("information om eleven.");
+    System.out.println("information om eleven " + elev.namn + " .");
 
     for (int index = 0; index < elevDelar.length; index++) {
         
         System.out.println(elevDelar[index]);
 
     }
+*/
         
 
-   
+   tb.close();
 
 }
    
@@ -81,7 +109,6 @@ public class App {
             } 
         catch (NumberFormatException e ) 
             {
-
                 break;
             } 
     }

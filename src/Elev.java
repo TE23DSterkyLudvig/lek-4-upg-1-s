@@ -1,4 +1,4 @@
-public class elever {
+public class Elev {
     String namn;
     String personnummer;
     String email;
@@ -6,7 +6,8 @@ public class elever {
     String klass;
     String program;
 
-    public elever(String namn, String personnummer, String email, String mobilnummer, String klass, String program)
+
+    public Elev(String namn, String personnummer, String email, String mobilnummer, String klass, String program)
     {
         this.namn = namn;
         this.personnummer = personnummer;
@@ -15,4 +16,5 @@ public class elever {
         this.klass = klass;
         this.program = program;
     }
+    
 }
